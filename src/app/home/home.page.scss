@@ -4,8 +4,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+
 }
 
 #container strong {
@@ -21,11 +20,91 @@
 
   margin: 0;
 }
-
+ion-list{
+  padding: 10px;
+}
 #container a {
   text-decoration: none;
 }
+button{
+  font-family: monospace;
+}
+#operatecard{
+  display: flex;
+  justify-content: space-between;
+}
+ion-button{
+  font-family: monospace;
+}
+ion-title{
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI';
+}
+.bar{
+  height: 30px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+}
+.g{
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin: 5px;
+  background: #009b00;
+}
+.y{
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin: 5px;
+  background: #ffd700;
+}
+.r{
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin: 5px;
+  background: #ff0000;
+}
 
-ion-content ion-toolbar {
-  --background: translucent;
+ion-card-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#InpNumber{
+  font-size: 20px;
+}
+#box{
+  background-color: #212121;
+  border-radius: 5px;
+  padding: 10px;
+}
+ion-input{
+  text-align: end;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+#card{
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.radios{
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 5px;
+  font-size: large;
+  color: #ffd534;
+}
+#iu{
+  text-align: center;
+  font-size: 10px;
+  margin: 5px;
 }

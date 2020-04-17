@@ -1,20 +1,77 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Scale</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button fill="solid" fill="clear" (click)="openModal()">
+        <ion-icon name="library-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content>
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle id="box">
+          <ion-input id="InpNumber" [(ngModel)]="name" type="number">
+            <ion-icon name="shapes"></ion-icon>
+          </ion-input>
+          <ion-input value={{result}} readonly></ion-input>
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card id="card">
+        <ion-card-content>
+          <div id="operatecard">
+            <ion-button (click)="calcY()" color="warning" fill="outline">1:{{selectedScale}} ; 1:100</ion-button>
+            <ion-button (click)="calcX()" color="warning" fill="outline">1:100 ; 1:{{selectedScale}}</ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-card>
+    <div class="gradi">
+      <ion-card>
+        <ion-card-subtitle>
+          <div class="bar">
+            <div class="g"></div>
+            <div class="y"></div>
+            <div class="r"></div>
+          </div>
+          <ion-list>
+            <ion-radio-group (ionChange)="scaleValue($event)" value="125">
+              <div class="radios">
+                <ion-radio color="warning" slot="start" value=125></ion-radio>
+                <ion-label>1:125</ion-label>
+              </div>
+              <div class="radios">
+                <ion-radio color="warning" slot="start" value=100></ion-radio>
+                <ion-label>1:100</ion-label>
+              </div>
+              <div class="radios">
+                <ion-radio color="warning" slot="start" value=75></ion-radio>
+                <ion-label>1:75</ion-label> 
+              </div>
+              <div class="radios">
+                <ion-radio color="warning" slot="start" value=50></ion-radio>
+                <ion-label>1:50</ion-label>
+              </div>
+              <div class="radios">
+                <ion-radio color="warning" slot="start" value=25></ion-radio>
+                <ion-label>1:25</ion-label>
+              </div>
+              <div class="radios">
+                <ion-radio color="warning" slot="start" value=20></ion-radio>
+                <ion-label>1:20</ion-label>
+              </div>
+            </ion-radio-group>
+          </ion-list>
+        </ion-card-subtitle>
+      </ion-card>
+    </div>
+    <p id="iu">
+      <ion-icon name="warning-outline"></ion-icon>
+        Os valores deverão estar em centímetros
+        <ion-icon name="warning-outline"></ion-icon> <br>
+      O resultado também será retornado na mesma unidade de medida.
+    </p>
+  </div>  
 </ion-content>
